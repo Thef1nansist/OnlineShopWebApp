@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Shop.Application.Cart.GetCart.Response>
+
+@{ 
+
+}
+
+<div>
+    <h2>Big Cart Component</h2>
+    @foreach (var item in Model)
+    {
+        <p>@item.Name</p>
+        <p>@item.Value</p>
+        <p>@item.StockId</p>
+        <p>@item.Qty</p>
+        <hr />
+    }
+</div>

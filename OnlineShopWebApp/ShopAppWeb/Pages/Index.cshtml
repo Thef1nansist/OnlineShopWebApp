@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div>
+    @{
+        foreach (var item in Model.Products)
+        {
+            <a asp-page="Product" asp-route-name="@item.Name.Replace(" ", "-")">
+                @item.Name - @item.Description - @item.Value
+            </a>
+            <br />
+        }
+    }
+</div>
+@await Component.InvokeAsync("Cart")
